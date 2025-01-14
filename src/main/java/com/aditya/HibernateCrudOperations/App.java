@@ -10,11 +10,11 @@ import com.aditya.entities.User;
 public class App {
 	public static void main(String[] args) {
 //		User user3 = new User();
-//		user3.setName("Priya");
-//		user3.setCity("Hajipur");
-//		user3.setGender("female");
-//		user3.setEmail("priyawa@gmail.com");
-//		user3.setPassword("password@priyawa");
+//		user3.setName("Bahubali Hu Mai");
+//		user3.setCity("Goa wale beach pe");
+//		user3.setGender("male");
+//		user3.setEmail("bahubali@bahuBhaiya.com");
+//		user3.setPassword("password@bahuBhai");
 
 		Configuration cfg = new Configuration();
 		cfg.configure("/com/aditya/config/hibernate.cfg.xml");
@@ -59,8 +59,8 @@ public class App {
 //		-----------------------Update Operation--------------------------
 
 //		try {
-//			User user = session.get(User.class, 2);
-//			user.setCity("Banglore");
+//			User user = session.get(User.class, 4);
+//			user.setName("Samyak Sigh Rajpoot");
 //			session.saveOrUpdate(user);
 //			transaction.commit();
 //			System.out.println("  User Details Updated Successfully...!  ");
@@ -69,19 +69,16 @@ public class App {
 //			e.printStackTrace();
 //			System.out.println("  User Details Not Updated Due To Some ERROR  ");
 //		}
-//		
-		
+
 //		-----------------------Delete Operation--------------------------
 
 		try {
 			User user = new User();
-			user.setId(3);
-			if(user!=null) {
+
+			user.setId(2);
 			session.delete(user);
 			transaction.commit();
 			System.out.println("  User Deleted Successfully...!  ");
-			}
-			System.out.println("User not found...");
 		} catch (Exception e) {
 			transaction.rollback();
 			e.printStackTrace();
